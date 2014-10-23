@@ -1,7 +1,6 @@
 $(document).ready(function() {
   var topStoriesRef = new Firebase('https://hacker-news.firebaseio.com/v0/topstories');
   topStoriesRef.on('value', function(snapshot){
-    console.log(snapshot.val());
     var topStories = snapshot.val();
     getTopStories(topStories);
   }, function(errorObject){

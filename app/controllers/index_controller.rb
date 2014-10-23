@@ -16,3 +16,8 @@ get '/users/:id' do
   erb :users
 end
 
+post '/story' do
+
+  redirect 'users/:id'
+end
+
