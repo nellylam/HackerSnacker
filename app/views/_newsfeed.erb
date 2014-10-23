@@ -1,0 +1,12 @@
+<div class="newsfeed">
+
+  <% @top_stories.each do |top_story| %>
+
+  <div class="story">
+    <h4 class="title"><%= top_story.title %></h4><p class="author"><%= top_story.author %></p>
+    <p class="url"><%= top_story.url %></p>
+  </div>
+
+  <% end %>
+
+</div>
