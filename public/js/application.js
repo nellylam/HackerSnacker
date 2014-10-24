@@ -45,4 +45,4 @@ $(document).ready(function() {
 
 (function Controller (){
 
-})
+});
