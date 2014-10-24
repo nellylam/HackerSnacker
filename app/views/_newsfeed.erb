@@ -1,12 +1,19 @@
-<div class="newsfeed">
+  <div class="newsfeed_js">
 
-  <% @top_stories.each do |top_story| %>
-
-  <div class="story">
-    <h4 class="title"><%= top_story.title %></h4><p class="author"><%= top_story.author %></p>
-    <p class="url"><%= top_story.url %></p>
   </div>
 
-  <% end %>
+  <div class="pocket">
 
-</div>
+  </div>
+
+  <div id="story_template" style="display: none;">
+    <div class="story">
+      <p class="p_left">
+        <strong class="title p_left">Title</strong><em class="author p_right">Author</em>
+      </p>
+      <p>
+        <button type="submit" formaction='/story' class="pocket_button">Put in Pocket</button>
+      </p>
+      <p class="p_right"><a href="" class="url" target="_blank">Go to Article &#8594;</a></p>
+    </div>
+  </div>

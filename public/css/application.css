@@ -2,8 +2,9 @@
 
 body {
     font-family: Futura, ‘Century Gothic’, AppleGothic, sans-serif;
-    background-image: url('http://freeseamlesstextures.com/images/33-crinkled-paper-background-lrg.jpg');
-    /*background-size: contain;*/
+    /*background-image: url('http://freeseamlesstextures.com/images/33-crinkled-paper-background-lrg.jpg');*/
+
+    color: #333;
 }
 /*header*/
 
@@ -24,16 +25,45 @@ h2 {
     font-style: italic;
     color: #ff6600;
 }
+
+
+/*signup*/
+
+.signup-form, .login-form{
+  width: 210px;
+  margin: 0 auto;
+}
+
+.signup-btn .login-btn{
+  margin: 0 auto;
+}
+
+.signup-form {
+  float: left;
+  margin-left: 20%;
+}
+
+.login-form {
+  float: right;
+  margin-right: 20%;
+}
+
+.forms {
+  width: 100%;
+  height: 350px;
+  background-color: whitesmoke;
+}
+
 /*newsfeed*/
 
 h3 {
     text-align: center;
-    border: solid 1px #ddd;
+    /*    border: solid 1px #ddd;
     border-radius: 4px;
     width: 50%;
     margin: 0 auto;
     background-color: #efefef;
-    box-shadow: inset 0 0 10px #ddd;
+    box-shadow: inset 0 0 10px #ddd;*/
 }
 .feed {
     color: #ff6600;
@@ -47,15 +77,20 @@ h3 {
     margin: 0;
 }
 .story {
+    overflow: hidden;
     border: solid 1px #ddd;
     border-radius: 4px;
     padding: .25em;
     margin: .25em;
     display: block;
-    background-color: #efefef;
-    -moz-box-shadow: inset 0 0 10px #ddd;
-    -webkit-box-shadow: inset 0 0 10px #ddd;
-    box-shadow: inset 0 0 10px #ddd;
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #e5e5e5));
+    background: -webkit-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    background: -o-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    background: -ms-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+    background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5', GradientType=0);
 }
 .title {
     margin-bottom: 4px;
@@ -70,7 +105,7 @@ h3 {
     color: #333;
     margin: 0 5px 0 5px;
 }
-button {
+button, .signup-btn {
     border: 1px solid #ffad41;
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -93,7 +128,7 @@ button {
     background-image: linear-gradient(to bottom, #ffc579, #ff6600);
     filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffc579, endColorstr=#ff6600);
 }
-button:hover {
+button:hover, .signup-btn:hover{
     border: 1px solid #ff9913;
     background-color: #ffaf46;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#ffaf46), to(#e78404));
@@ -106,8 +141,13 @@ button:hover {
 }
 a {
     text-decoration: none;
-    color: #FFFFFF;
+    color: #ababab;
+    font-size: 16px;
 }
+.p_url {
+    float: right;
+}
+
 /*footer*/
 
 footer {

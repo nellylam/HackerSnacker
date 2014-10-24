@@ -8,7 +8,7 @@ get '/' do
 end
 
 post '/users' do
-  User.create(params)
+  @user = User.create(params)
 end
 
 get '/users/:id' do
@@ -17,7 +17,16 @@ get '/users/:id' do
 end
 
 post '/story' do
-
-  redirect 'users/:id'
+  p params
+  story = Story.create(params)
+  p story
+  redirect '/'
 end
 
+post '/users/new' do
+
+end
+
+post '/users/login' do
+
+end

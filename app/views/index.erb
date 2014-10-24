@@ -1,23 +1,13 @@
 <div class="container">
+  <% unless current_user %>
+    <div class="forms">
+      <%= erb :_signup %>
+      <%= erb :_login %>
+    </div>
+  <% end %>
+
   <h3>News <em class="feed">Feed</em> - Top 100 Stories</h3>
 
-  <div class="newsfeed_js">
-
-  </div>
-
-  <div class="pocket">
-
-  </div>
-
-  <div id="story_template" style="display: none;">
-    <div class="story">
-      <p><strong class="title">Title</strong><em class="author">Author</em></p>
-      <p></p>
-      <p>
-        <button><a href="" class="url" target="_blank">Go to Article</a></button>
-        <button type="submit" action='/story' class="pocket_button">Put in Pocket</button>
-      </p>
-    </div>
-  </div>
+  <%= erb :_newsfeed %>
 
 </div>
