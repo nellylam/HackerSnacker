@@ -32,3 +32,8 @@ post '/users/login' do
     redirect'/'
   end
 end
+
+get '/logout' do
+  session.clear
+  redirect '/'
+end
