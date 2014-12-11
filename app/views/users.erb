@@ -2,5 +2,5 @@
   <hgroup>
     <h1> <%= @current_user.username %>'s pocket</h1>
   </hgroup>
-  <% erb :_user_newsfeed %>
+  <%= erb :_user_newsfeed, :layout => false, :locals => { :current_user => @current_user } %>
 </header>

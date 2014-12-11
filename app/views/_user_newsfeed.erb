@@ -1,10 +1,11 @@
-<div class="newsfeed">
-
+<div class="newsfeed_js">
   <% @current_user.stories.each do |story| %>
 
   <div class="story">
-    <h4 class="title"><%= story.title %></h4><p class="author"><%= story.author %></p>
-    <p class="url"><%= story.url %></p>
+    <p class="p_left">
+      <strong class="title p_left"> <%= story.title %> </strong><em class="author p_right"> <%= story.author %> </em>
+    </p>
+    <p class="p_right"><a href="" class="url" target="_blank">Go to Article &#8594;</a></p>
   </div>
 
   <% end %>
