@@ -12,6 +12,10 @@ end
 
 post '/story' do
   #Todo: Save the story to the user's pocket
+  current_user
+  api = HackerNews::Client.new
+  p params
+  @current_user.stories << api.get_story(params["story_id"])
   redirect '/'
 end
 

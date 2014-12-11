@@ -22,27 +22,39 @@ $(document).ready(function() {
     var title = storyRaw["title"];
     var url = storyRaw["url"];
     var author = storyRaw["by"];
+    var id = storyRaw["id"];
 
-    renderStory(title,author,url);
+    renderStory(title, author, url, id);
   }
 
-  function renderStory (title, author, url) {
-    $story_div = buildStoryTemplate(title, author, url);
+  function renderStory (title, author, url, id) {
+    $story_div = buildStoryTemplate(title, author, url, id);
     $('.newsfeed_js').append($story_div).css( { 'display': 'block' } );
 
   }
 
-  function buildStoryTemplate(title, author, url){
+  function buildStoryTemplate(title, author, url, id){
     var story_template = $.trim($('#story_template').html());
     var $storytemplate = $(story_template);
     $storytemplate.find('.title').text(title);
     $storytemplate.find('.author').text(author);
     $storytemplate.find('.url').attr('href', url);
+    $storytemplate.find('.hn_story_id').text(id);
     return $storytemplate;
   }
 
-});
+  $('.newsfeed_js').on('click', 'button', function(e){
+    e.preventDefault();
+    var $el = $(e.target);
+    var id = $el.parent().parent().children('.hn_story_id').text();
+    newStory(id);
+  });
 
-(function Controller (){
-
+  function newStory (id) {
+    $.ajax({
+      url: '/story',
+      type: 'POST',
+      data: {story_id: id}
+    }).done(alert('done')).fail(alert('fail'));
+  }
 });

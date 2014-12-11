@@ -29,7 +29,6 @@ module HackerNews
 
     def get_story(id)
       one_story_response = MY_FIREBASE.get("item/#{id}")
-      p one_story_response.body
       one_story = one_story_response.body
       create_story(one_story)
     end
