@@ -21,7 +21,8 @@ post '/users/new' do
   @user = User.new(params)
   @user.password = params[:password]
   @user.save
-  erb :index
+  session[:user_id] = @user.id
+  redirect '/'
 end
 
 post '/users/login' do
