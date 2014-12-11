@@ -1,7 +1,6 @@
 <nav>
   <% if current_user %>
-  <ul>
-    <li><a href="/logout">Logout</a></li>
-  </ul>
+    <a href="/users/<%= @current_user.id %>">My Pocket</a>
+    <a href="/logout">Logout</a>
   <% end %>
 </nav>

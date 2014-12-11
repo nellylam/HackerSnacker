@@ -6,16 +6,31 @@ body {
 
   color: #333;
 }
+
+a {
+  text-decoration: none;
+  color: #ababab;
+  font-size: 16px;
+}
 /*header*/
 
-nav ul {
-  margin: 0;
-  padding: 0;
-}
-nav ul li {
-  list-style: none;
+nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  height: 30px;
   text-align: right;
-  margin: .25em 1em 0 0;
+  padding-top: .25em;
+}
+
+nav a {
+  color: #fff;
+  list-style: none;
+  display: inline;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 14px;
 }
 hgroup {
   text-align: center;
@@ -141,11 +156,7 @@ button:hover, .signup-btn:hover {
   background-image: linear-gradient(to bottom, #ffaf46, #e78404);
   filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#ffaf46, endColorstr=#e78404);
 }
-a {
-  text-decoration: none;
-  color: #ababab;
-  font-size: 16px;
-}
+
 .p_url {
   float: right;
 }
