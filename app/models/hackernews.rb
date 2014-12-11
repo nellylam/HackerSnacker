@@ -36,7 +36,8 @@ module HackerNews
     def create_story(story_json)
       Story.create( title: story_json["title"],
                     author: story_json["by"],
-                    url: story_json["url"] )
+                    url: story_json["url"],
+                    hacker_news_id: story_json["id"] )
     end
 
   end
