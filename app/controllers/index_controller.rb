@@ -5,7 +5,8 @@ get '/' do
 end
 
 get '/users/:id' do
-
+  current_user
+  @user_pocket = @current_user.stories
   erb :users
 end
 

@@ -1,10 +1,10 @@
 <div class="newsfeed">
 
-  <% @top_stories.each do |top_story| %>
+  <% @current_user.stories.each do |story| %>
 
   <div class="story">
-    <h4 class="title"><%= top_story.title %></h4><p class="author"><%= top_story.author %></p>
-    <p class="url"><%= top_story.url %></p>
+    <h4 class="title"><%= story.title %></h4><p class="author"><%= story.author %></p>
+    <p class="url"><%= story.url %></p>
   </div>
 
   <% end %>
