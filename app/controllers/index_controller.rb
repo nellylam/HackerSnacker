@@ -20,7 +20,7 @@ end
 post '/users/new' do
   @user = User.new(params)
   @user.password = params[:password]
-  @user.save!
+  @user.save
   erb :index
 end
 
