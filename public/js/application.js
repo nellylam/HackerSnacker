@@ -48,6 +48,7 @@ $(document).ready(function() {
     var $el = $(e.target);
     var id = $el.parent().parent().children('.hn_story_id').text();
     newStory(id);
+    hidePocketButton($el);
   });
 
   function newStory (id) {
@@ -55,6 +56,10 @@ $(document).ready(function() {
       url: '/story',
       type: 'POST',
       data: {story_id: id}
-    }).done(alert('done')).fail(alert('fail'));
+    }).done();
+  }
+
+  function hidePocketButton($el){
+    $el.fadeOut();
   }
 });
